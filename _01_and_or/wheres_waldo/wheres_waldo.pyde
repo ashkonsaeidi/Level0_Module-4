@@ -15,31 +15,36 @@ def setup():
     waldo = loadImage("waldo.jpg")
     
     # Use the size() function to set the width and height of your sketch
-
+    size(500, 500)
     # Resize your waldo picture to the same size as the sketch
-
+    waldo.resize(500, 500)
     # Use the background() function to make the waldo image your
     # sketch background
-
+    background(waldo)
     
 def draw():
     # If the user presses the mouse...
     # *Hint* use the mousePressed variable
-  
+    if mousePressed:
+        print('x: ' +str(mouseX) + ' y: ' + str(mouseY))
         # Use this print statement to help you find the location
         # of Waldo to use in the code below
     
         # Check if the location of the mouse is anywhere on the image of Waldo.
         # If it is, print “Waldo found!”  Use the text() command to write it
         # on the sketch.
-          
+    
+        if mouseX > 310 and mouseX < 345 and mouseY > 248 and mouseY < 352:
+            text("Waldo found!", 200, 200)
+            play_woohoo()
+
             # Use the play_woohoo() method below.
         
         # However, if the mouse is not on Waldo, print "Not here!" 
         # Use the text() command to write it on the sketch.
-          
             # Use the play_doh() method below.
-      
+        else:
+            text("Not here", 200, 200)
 
     pass    
 
