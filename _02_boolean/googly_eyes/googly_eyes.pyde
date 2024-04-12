@@ -32,7 +32,7 @@ def draw():
     if mousePressed:
         print('x: ' +str(mouseX) + ' y: ' + str(mouseY))
     fill('#E8E8E8')
-    shape = circle(267, 220, 300)
+    shape = circle(267, 220, 300) 
     # 6. Call the  function with the correct input parameters to draw
     # the pupil insdie the eye. Does it stay inside the eye and follow the mouse?
     # 7. Repeat the steps above for the right eye and observe the googly eyes!
