@@ -1,4 +1,4 @@
-"""
+def tkinter(): """
 Boolean Variable Demo
 """
 
