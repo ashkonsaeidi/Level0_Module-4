@@ -1,7 +1,5 @@
-def tkinter(): """
-Boolean Variable Demo
-"""
 
+from tkinter import messagebox, simpledialog, Tk
 # Boolean is a variable type that has two values:
 #   True
 #   False
@@ -30,7 +28,8 @@ if __name__ == '__main__':
     # Two boolean variables
     boolean_var1 = True
     boolean_var2 = False
-
+    window = Tk()
+    window.withdraw()
     # NOTE - boolean_var1 == True is not necessary
     if boolean_var1:
         print('boolean_var1 is True!')
