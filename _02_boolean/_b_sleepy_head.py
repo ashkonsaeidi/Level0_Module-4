@@ -1,5 +1,4 @@
-from tkinter import messagebox, simpledialog, Tk
-
+from tkinter import messagebox, Tk, simpledialog
 
 
 
@@ -39,8 +38,9 @@ if __name__ == '__main__':
     game_finished = False
     number = simpledialog.askstring(title=None, prompt="What is 2 + 2?")
     if number == '4':
-     game_finished = False
+        game_finished = False
     else:
+        messagebox.showinfo(title=None, message="You lost, game over")
         exit()
     if not game_finished:
         messagebox.showinfo(title=None, message="Congrats! Continue forward")
@@ -49,6 +49,16 @@ if __name__ == '__main__':
     if chicken == '10':
         game_finished = False
     else:
+        messagebox.showinfo(title=None, message="You lost, game over")
+        exit()
+    if not game_finished:
+        messagebox.showinfo(title=None, message="Congrats! Continue forward")
+
+    ball = simpledialog.askstring(title=None, prompt="What is 10^2")
+    if ball == '100':
+        game_finished = False
+    else:
+        messagebox.showinfo(title=None, message="You lost, game over")
         exit()
     if not game_finished:
         messagebox.showinfo(title=None, message="Congrats! Continue forward")
