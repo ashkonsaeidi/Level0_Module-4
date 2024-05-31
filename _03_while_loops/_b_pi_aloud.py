@@ -16,18 +16,21 @@ if __name__ == '__main__':
     #  pi_str[1]   # second digit
     pi_str = '31415926535897932384'
     print(pi_str[0])
+    print(pi_str[1])
     print(pi_str[2])
-    print(pi_str[3])
 
     # TODO) Use a while loop to keep asking for the next digit of pi
-    answer = simpledialog.askinteger(None, prompt = "What is the next letter of pi?")
-    score = 3
+
+    score = 0
     while score < len(pi_str):
-        answer
-    if answer == pi_str[score]:
-        score += 1
-    else:
-        exit()
+        answer = simpledialog.askstring(None, prompt = "What is the next letter of pi?")
+        if answer == pi_str[score]:
+            score += 1
+            print('correct!')
+        else:
+            print('incorrect!')
+            print('You got '+str(score)+' amount of digits correct!')
+            exit()
 
 
         # TODO) If they are correct, print "correct".

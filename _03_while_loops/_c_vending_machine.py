@@ -37,10 +37,26 @@ if __name__ == '__main__':
     money_in_dollars = 3.00
 
     # TODO) Write a while loop that ends when you have no money left
-
+    while money_in_dollars > 0.00:
+        answer = simpledialog.askstring(title = None, prompt = "vending_machine")
+    else:
+        messagebox.showinfo(title=None, message="Too much money spent!")
+        exit()
         # TODO) Call the vending_machine() function and save the money spent
         #  in a variable, for example:
         #  money_spent = vending_machine(money_in_dollars)
+    money_spent = vending_machine(money_in_dollars)
+    if answer == "Candy bar":
+        money_in_dollars - 1.50
+    if answer == "Pretzels":
+        money_in_dollars - 1.00
+    if answer == "Water":
+        money_in_dollars - 0.50
+    if answer == "Soda":
+        money_in_dollars - 1.00
+
+
+
 
         # TODO) If no money was spent, tell the user how much money they still
         #  have and exit the while loop
